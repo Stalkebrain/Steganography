@@ -5,18 +5,15 @@ import javax.imageio.ImageIO;
 
 public class VisualAttack {
 
-    public static void main(String[] args) {
-        String stegoImagePath = "E:\\Users\\Stalkerbrain\\Диплом\\Проги\\untitled\\джоджо\\jojo_stego.bmp";
-        String visualAttackImagePath = "E:\\Users\\Stalkerbrain\\Диплом\\Проги\\untitled\\джоджо\\jojo_attack.bmp";
+    public static void main(String[] args) throws IOException {
+        String stegoImagePath = "src/main/resources/bibizyan/111111-stego.bmp";
+        String visualAttackImagePath = "src/main/resources/bibizyan/111111-stego-attack.bmp";
 
-        try {
-            BufferedImage stegoImage = ImageIO.read(new File(stegoImagePath));
-            BufferedImage visualAttackImage = visualizeLSB(stegoImage);
-            ImageIO.write(visualAttackImage, "bmp", new File(visualAttackImagePath));
-            System.out.println("Визуальная атака выполнена и сохранена.");
-        } catch (IOException e) {
-            System.out.println("Ошибка: " + e.getMessage());
-        }
+        BufferedImage stegoImage = ImageIO.read(new File(stegoImagePath));
+        BufferedImage visualAttackImage = visualizeLSB(stegoImage);
+        ImageIO.write(visualAttackImage, "bmp", new File(visualAttackImagePath));
+        System.out.println("Визуальная атака выполнена и сохранена.");
+
     }
 
     private static BufferedImage visualizeLSB(BufferedImage img) {
