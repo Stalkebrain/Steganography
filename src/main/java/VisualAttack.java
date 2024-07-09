@@ -6,8 +6,8 @@ import javax.imageio.ImageIO;
 public class VisualAttack {
 
     public static void main(String[] args) throws IOException {
-        String stegoImagePath = "src/main/resources/bibizyan/111111-stego.bmp";
-        String visualAttackImagePath = "src/main/resources/bibizyan/111111-stego-attack.bmp";
+        String stegoImagePath = "src/main/resources/рисунок/123-stego.bmp";
+        String visualAttackImagePath = "src/main/resources/рисунок/123-stego-attack.bmp";
 
         BufferedImage stegoImage = ImageIO.read(new File(stegoImagePath));
         BufferedImage visualAttackImage = visualizeLSB(stegoImage);

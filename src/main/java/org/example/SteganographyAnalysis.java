@@ -6,7 +6,7 @@ import java.util.*;
 public class SteganographyAnalysis {
     public static void main(String[] args) {
         // Путь к файлу с данными
-        String filePath = "src/main/resources/bibizyan/111111-stego-histogram.txt";
+        String filePath = "src/main/resources/рисунок/123-stego-histogram.txt";
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
         double chiSquared = 0;
 

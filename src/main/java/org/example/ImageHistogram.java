@@ -11,7 +11,7 @@ public class ImageHistogram {
     public static void main(String[] args) {
         try {
             // Загрузка изображения
-            BufferedImage image = ImageIO.read(new File("src/main/resources/bibizyan/111111-stego.bmp")); // Укажите путь к изображению
+            BufferedImage image = ImageIO.read(new File("src/main/resources/рисунок/123-stego.bmp")); // Укажите путь к изображению
 
             // Проверка размеров изображения
             if (image.getWidth() != 512 || image.getHeight() != 512) {
@@ -29,7 +29,7 @@ public class ImageHistogram {
             }
 
             // Запись данных гистограммы в файл
-            try (FileWriter writer = new FileWriter("src/main/resources/bibizyan/111111-stego-histogram.txt")) {
+            try (FileWriter writer = new FileWriter("src/main/resources/рисунок/123-stego-histogram.txt")) {
                 for (int i = 0; i < histogram.length; i++) {
                     writer.write(i + ":" + histogram[i] + "\n");
                 }

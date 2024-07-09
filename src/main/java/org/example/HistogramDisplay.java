@@ -54,10 +54,10 @@ public class HistogramDisplay extends Canvas {
     }
 
     public static void main(String[] args) {
-        double scale = 0.1; // Установите нужный масштаб
+        double scale = 0.03; // Установите нужный масштаб
         int columnWidth = 10; // Установите нужную ширину столбца
         JFrame frame = new JFrame("Гистограмма");
-        HistogramDisplay histogram = new HistogramDisplay("src/main/resources/джоджо/jojo-stego_histogram_data.txt", scale, columnWidth); // Замените на путь к вашему файлу данных
+        HistogramDisplay histogram = new HistogramDisplay("src/main/resources/рисунок/123-stego-histogram.txt", scale, columnWidth); // Замените на путь к вашему файлу данных
 
         // Устанавливаем окно на весь экран
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
