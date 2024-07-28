@@ -10,9 +10,21 @@ public class RSAnalysis {
     public static void main(String[] args) throws Exception {
         BufferedImage img = ImageIO.read(new File("E:\\Users\\Stalkerbrain\\Downloads\\image.jpg"));
         double[] results = rsTest(img);
-        System.out.println("Red Channel: " + results[0]*100);
-        System.out.println("Green Channel: " + results[1]*100);
-        System.out.println("Blue Channel: " + results[2]*100);
+        if (results[0]*100<4) {
+            System.out.println("Red Channel: " + 0.0);
+        }else {
+            System.out.println("Red Channel: " + results[0]*100);
+        }
+        if (results[1]*100<4) {
+            System.out.println("Green Channel: " + 0.0);
+        }else {
+            System.out.println("Green Channel: " + results[1]*100);
+        }
+        if (results[2]*100<4) {
+            System.out.println("Blue Channel: " + 0.0);
+        }else {
+            System.out.println("Blue Channel: " + results[2]*100);
+        }
         System.out.println("Average: " + results[3]*100);
     }
 
@@ -134,10 +146,10 @@ public class RSAnalysis {
     }
 
     public static double solve(int[] groups) {
-        int d0 = 2 * (groups[0] - groups[2]); // увеличиваем d0 в 2 раза
-        int dm0 = 2 * (groups[6] - groups[8]); // увеличиваем dm0 в 2 раза
-        int d1 = 2 * (groups[3] - groups[5]); // увеличиваем d1 в 2 раза
-        int dm1 = 2 * (groups[9] - groups[11]); // увеличиваем dm1 в 2 раза
+        int d0 = (groups[0] - groups[2]);
+        int dm0 = (groups[6] - groups[8]);
+        int d1 = (groups[3] - groups[5]);
+        int dm1 = (groups[9] - groups[11]);
 
         double a = 2.0 * (d1 + d0);
         double b = (dm0 - dm1 - d1 - 3 * d0);
